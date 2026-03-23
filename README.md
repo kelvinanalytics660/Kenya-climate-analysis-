@@ -19,3 +19,8 @@ Python script used to explore and visualize climate trends.
 - Use machine learning to predict future climate trends
 - Include more detailed datasets specific to Kenya
 - Build an interactive dashboard
+## 📈 Visual Insights
+
+- The line graph shows how climate values change over time.
+- The histogram reveals how frequently certain values occur.
+- Trends may indicate seasonal patterns or long-term changes.
