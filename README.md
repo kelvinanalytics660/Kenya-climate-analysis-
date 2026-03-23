@@ -9,3 +9,8 @@ Python script used to explore and visualize climate trends.
 ## 🔧 How to Use
 1. Download files
 2. Run analysis.py using Python
+## 🔍 Key Insights
+
+- The dataset shows variation in climate values over time.
+- There are noticeable trends that may indicate seasonal or long-term changes.
+- Data cleaning was necessary due to missing values.
