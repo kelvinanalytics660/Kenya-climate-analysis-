@@ -4,16 +4,40 @@ import matplotlib.pyplot as plt
 # Load dataset
 data = pd.read_csv('kenya_climate_data.csv')
 
-# Show first 5 rows
+# Preview data
+print("First 5 rows:")
 print(data.head())
 
-# Basic info
-print(data.info())
+# Check missing values
+print("\nMissing values:")
+print(data.isnull().sum())
 
-# Plot (example - adjust column names if needed)
-data.plot(x=data.columns[0], y=data.columns[1], kind='line')
+# Drop missing values (cleaning)
+data = data.dropna()
 
-plt.title("Climate Trend Analysis")
-plt.xlabel("Time")
-plt.ylabel("Value")
+# Convert date column if exists
+if 'Date' in data.columns:
+    data['Date'] = pd.to_datetime(data['Date'])
+    data = data.sort_values('Date')
+
+# Basic statistics
+print("\nSummary statistics:")
+print(data.describe())
+
+# Plot 1: Trend over time
+if 'Date' in data.columns:
+    plt.figure()
+    plt.plot(data['Date'], data[data.columns[1]])
+    plt.title("Climate Trend Over Time")
+    plt.xlabel("Date")
+    plt.ylabel("Value")
+    plt.xticks(rotation=45)
+    plt.show()
+
+# Plot 2: Distribution
+plt.figure()
+data[data.columns[1]].hist()
+plt.title("Distribution of Climate Values")
+plt.xlabel("Value")
+plt.ylabel("Frequency")
 plt.show()
