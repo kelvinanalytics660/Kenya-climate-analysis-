@@ -61,3 +61,21 @@ plt.title("Distribution of Climate Values")
 plt.xlabel("Value")
 plt.ylabel("Frequency")
 plt.show()
+# Advanced Plot: Compare two variables (if available)
+
+columns = data.columns
+
+if len(columns) >= 3:
+    plt.figure(figsize=(10,5))
+    
+    plt.plot(data[columns[0]], data[columns[1]], label=columns[1])
+    plt.plot(data[columns[0]], data[columns[2]], label=columns[2])
+    
+    plt.title("Comparison of Climate Variables", fontsize=14)
+    plt.xlabel(columns[0], fontsize=12)
+    plt.ylabel("Values", fontsize=12)
+    plt.legend()
+    plt.grid(True)
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.show()
