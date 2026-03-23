@@ -24,3 +24,8 @@ Python script used to explore and visualize climate trends.
 - The line graph shows how climate values change over time.
 - The histogram reveals how frequently certain values occur.
 - Trends may indicate seasonal patterns or long-term changes.
+## 📊 Advanced Analysis
+
+- Compared multiple climate variables on the same graph
+- Identified relationships between variables
+- Improved visualization for better insights
