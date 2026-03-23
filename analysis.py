@@ -27,7 +27,27 @@ print(data.describe())
 # Plot 1: Trend over time
 if 'Date' in data.columns:
     plt.figure()
+   # Improved Plot 1: Trend over time
+if 'Date' in data.columns:
+    plt.figure(figsize=(10,5))
     plt.plot(data['Date'], data[data.columns[1]])
+    plt.title("Climate Trend Over Time", fontsize=14)
+    plt.xlabel("Date", fontsize=12)
+    plt.ylabel("Value", fontsize=12)
+    plt.xticks(rotation=45)
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
+
+# Improved Plot 2: Distribution
+plt.figure(figsize=(8,5))
+plt.hist(data[data.columns[1]], bins=20)
+plt.title("Distribution of Climate Values", fontsize=14)
+plt.xlabel("Value", fontsize=12)
+plt.ylabel("Frequency", fontsize=12)
+plt.grid(True)
+plt.tight_layout()
+plt.show() (data['Date'], data[data.columns[1]])
     plt.title("Climate Trend Over Time")
     plt.xlabel("Date")
     plt.ylabel("Value")
